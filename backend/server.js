@@ -8,8 +8,6 @@ dotenv.config();
 const app = express();
 
 /* CORS FIRST */
-const cors = require("cors");
-
 app.use(cors({
   origin: [
     "http://localhost:5173",
