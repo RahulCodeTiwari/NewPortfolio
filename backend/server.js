@@ -14,11 +14,9 @@ app.use(cors({
     "http://localhost:5173",
     "https://new-portfolio-jet-nine.vercel.app"
   ],
-  methods: ["GET", "POST", "OPTIONS"],
+  methods: ["GET", "POST"],
   allowedHeaders: ["Content-Type"]
 }));
-
-app.options("*", cors());
 
 app.use(express.json());
 
