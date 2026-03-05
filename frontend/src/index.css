@@ -1,0 +1,57 @@
+
+
+@import "tailwindcss";
+
+/* LIGHT MODE */
+:root {
+  --color-bg: #ffffff;
+  --color-text: #0f172a;
+  --color-card: #f8fafc;
+  --color-border: #e2e8f0;
+}
+
+/* DARK MODE */
+.dark {
+  --color-bg: #0f172a;
+  --color-text: #f1f5f9;
+  --color-card: #1e293b;
+  --color-border: #334155;
+}
+
+.section-container {
+  @apply max-w-7xl mx-auto px-6 md:px-8 py-32 ;
+}
+
+
+
+
+.section-container {
+  @apply max-w-7xl mx-auto px-6 md:px-8 py-16 ;
+}
+
+
+.section-title {
+  @apply text-3xl md:text-5xl font-bold tracking-tight 
+         bg-gradient-to-r from-violet-600 to-cyan-500 
+         bg-clip-text text-transparent 
+         leading-tight;
+}
+
+
+.section-subtitle {
+  @apply text-base md:text-lg 
+        
+         max-w-2xl 
+         leading-relaxed 
+         mt-4;
+}
+
+
+.section-eyebrow {
+  @apply text-xs font-semibold tracking-[0.35em] uppercase 
+         text-violet-600 dark:text-cyan-400 
+         mb-4;
+} 
+
+
+

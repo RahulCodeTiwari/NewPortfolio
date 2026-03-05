@@ -1,0 +1,107 @@
+/* frontend/src/theme.css */
+
+/* Modern Light Mode */
+:root {
+  --bg: #f1f5f9;                /* soft slate */
+  --text: #0f172a;              /* deep slate */
+  --card: #ffffff;
+  --border: #e2e8f0;
+  --primary: #7c3aed;           /* modern violet */
+  --accent: #06b6d4;            /* cyan accent */
+}
+
+/* Modern Dark Mode */
+.dark {
+  --bg: #0f172a;                /* dark slate */
+  --text: #f1f5f9;
+  --card: #111827;
+  --border: #1e293b;
+  --primary: #8b5cf6;           /* glowing violet */
+  --accent: #22d3ee;            /* bright cyan */
+}
+
+/* Global */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Inter", system-ui, sans-serif;
+  background:
+    radial-gradient(circle at 20% 10%, rgba(124, 58, 237, 0.18), transparent 50%),
+    radial-gradient(circle at 80% 90%, rgba(6, 182, 212, 0.18), transparent 50%),
+    var(--bg);
+  color: var(--text);
+  scroll-behavior: smooth;
+  transition: background 0.3s ease, color 0.3s ease;
+}
+
+/* Glass card */
+.bg-card {
+  background: rgba(255, 255, 255, 0.65);
+  backdrop-filter: blur(20px);
+  border: 1px solid var(--border);
+  border-radius: 20px;
+  transition: all 0.3s ease;
+}
+
+.dark .bg-card {
+  background: rgba(17, 24, 39, 0.65);
+}
+
+/* Text */
+.text-base {
+  color: var(--text);
+}
+
+/* Modern Gradient Button */
+.btn-primary {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 9999px;
+  background: linear-gradient(135deg, var(--primary), var(--accent));
+  color: #ffffff;
+  font-weight: 600;
+  letter-spacing: 0.05em;
+  font-size: 0.8rem;
+  padding: 0.9rem 1.8rem;
+  border: none;
+  cursor: pointer;
+  box-shadow:
+    0 10px 35px rgba(124, 58, 237, 0.35);
+  transition: all 0.25s ease;
+}
+
+.btn-primary:hover {
+  transform: translateY(-2px);
+  box-shadow:
+    0 15px 45px rgba(124, 58, 237, 0.5);
+  filter: brightness(1.1);
+}
+
+.btn-primary:active {
+  transform: scale(0.98);
+}
+
+/* Theme Toggle Glow */
+.theme-glow {
+  animation: glow 0.4s ease;
+}
+
+@keyframes glow {
+  0% {
+    box-shadow: 0 0 0px var(--primary);
+  }
+  50% {
+    box-shadow: 0 0 20px rgba(124, 58, 237, 0.6);
+  }
+  100% {
+    box-shadow: 0 0 0px var(--primary);
+  }
+}
