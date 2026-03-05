@@ -21,10 +21,11 @@ export default function Contact() {
     setLoading(true);
 
     try {
-      const res = await axios.post(
-        "http://localhost:5000/api/contact",
-        form
-      );
+     const res = await axios.post(
+  `${import.meta.env.VITE_API_URL}/api/contact`,
+  form
+);
+      
       setStatus(res.data?.message || "Message sent!");
       setForm({ name: "", email: "", subject: "", message: "" });
     } catch (err) {

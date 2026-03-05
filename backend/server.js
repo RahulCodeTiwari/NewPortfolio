@@ -9,7 +9,9 @@ const app = express();
 
 /* CORS FIRST */
 app.use(cors({
-  origin: "http://localhost:5173",
+  origin: ["http://localhost:5173",
+    "https://new-portfolio-jet-nine.vercel.app/",
+  ],
   methods: ["GET", "POST"],
   allowedHeaders: ["Content-Type"],
 }));
