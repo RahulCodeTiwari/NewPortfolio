@@ -8,12 +8,15 @@ dotenv.config();
 const app = express();
 
 /* CORS FIRST */
+const cors = require("cors");
+
 app.use(cors({
-  origin: ["http://localhost:5173",
-    "https://new-portfolio-jet-nine.vercel.app/",
+  origin: [
+    "http://localhost:5173",
+    "https://new-portfolio-jet-nine.vercel.app"
   ],
   methods: ["GET", "POST"],
-  allowedHeaders: ["Content-Type"],
+  allowedHeaders: ["Content-Type"]
 }));
 
 app.use(express.json());
